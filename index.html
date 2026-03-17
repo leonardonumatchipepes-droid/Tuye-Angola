@@ -3,64 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TUYE ANGOLA - Inscrição Oficial</title>
+<title>TUYE ANGOLA | Inscrição Oficial</title>
 
 <style>
 body {
-    font-family: Arial;
-    margin: 0;
-    background: #f4f6f8;
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0a3d62,#3c6382);
 }
 
 header {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    text-align:center;
+    color:white;
+    padding:30px 20px;
 }
 
 header img {
-    width: 100px;
+    width:120px;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 h2 {
-    color: #0a3d62;
+    color:#0a3d62;
 }
 
 iframe {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
+    width:100%;
+    border:none;
+    border-radius:10px;
+}
+
+.checkbox {
+    margin-top:15px;
+    font-weight:bold;
 }
 
 .btn {
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-top: 20px;
+    display:block;
+    text-align:center;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.whatsapp {
+    background:#25D366;
+    color:white;
+}
+
+.pdf {
+    background:#e55039;
+    color:white;
+}
+
+.btn:hover {
+    opacity:0.9;
+}
+
+footer {
+    text-align:center;
+    color:white;
+    padding:15px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <img src="https://drive.google.com/uc?export=view&id=16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn">
+    <img src="https://lh3.googleusercontent.com/d/16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn">
     <h1>TUYE ANGOLA</h1>
-    <p>Inscrição Oficial de Membros</p>
+    <p>Plataforma Oficial de Inscrição</p>
 </header>
 
 <div class="container">
@@ -69,34 +94,46 @@ iframe {
 
 <iframe src="https://drive.google.com/file/d/1foAfNRJekVj4BChnR1oqq0qKTEguwP5T/preview" height="400"></iframe>
 
-<br>
+<a href="https://drive.google.com/uc?export=download&id=1foAfNRJekVj4BChnR1oqq0qKTEguwP5T" 
+   class="btn pdf" target="_blank">
+   📄 Baixar Estatuto em PDF
+</a>
 
-<label>
-<input type="checkbox" id="confirmar">
-Confirmo que li e aceito o estatuto *
-</label>
+<div class="checkbox">
+    <label>
+        <input type="checkbox" id="confirmar">
+        Confirmo que li e aceito o estatuto *
+    </label>
+</div>
 
 <h2>📝 Formulário de Inscrição</h2>
 
-<!-- FORMULÁRIO REAL -->
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeS6H-KA6P64JJ2Y7kzqtp5otpZ-o4vYD6zUcnR2527FmMs9Q/viewform?embedded=true" height="900"></iframe>
 
-<a href="#" class="btn" onclick="whatsapp()">📲 Falar no WhatsApp</a>
+<a href="#" class="btn whatsapp" onclick="abrirWhatsApp()">
+📲 Falar no WhatsApp
+</a>
 
 </div>
 
-<script>
-function whatsapp() {
+<footer>
+© 2026 TUYE ANGOLA — Todos os direitos reservados
+</footer>
 
-    if (!document.getElementById("confirmar").checked) {
-        alert("Confirme que leu o estatuto primeiro.");
+<script>
+function abrirWhatsApp(){
+
+    var check = document.getElementById("confirmar");
+
+    if(!check.checked){
+        alert("Por favor, confirme que leu o estatuto.");
         return;
     }
 
-    var msg = "Olá sou novo membro da TUYE ANGOLA";
     var numero = "244929311220";
+    var mensagem = "Olá, sou novo membro da TUYE ANGOLA. Já fiz a minha inscrição.";
 
-    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
 
     window.open(url, "_blank");
 }
