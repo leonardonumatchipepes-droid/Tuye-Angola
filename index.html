@@ -3,139 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TUYE ANGOLA | Inscrição Oficial</title>
+<title>TUYE ANGOLA - Inscrição Oficial</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Ícone e tela inicial estilo app -->
+<link rel="icon" href="https://drive.google.com/uc?export=view&id=16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn" type="image/png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TUYE ANGOLA">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn">
 
 <style>
+/* RESET BÁSICO */
+* {margin:0;padding:0;box-sizing:border-box;}
 body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#0a3d62,#3c6382);
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a3d62, #1e3799);
+    color: #333;
+    line-height:1.6;
+    min-height:100vh;
 }
 
+/* CABEÇALHO */
 header {
-    text-align:center;
-    color:white;
-    padding:30px 20px;
+    text-align: center;
+    padding: 30px 15px;
+    color: white;
 }
-
 header img {
-    width:120px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+header h1 {
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+header p {
+    font-size: 16px;
+    opacity: 0.9;
 }
 
+/* CONTAINER PRINCIPAL */
 .container {
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
+/* TÍTULOS */
 h2 {
-    color:#0a3d62;
+    color: #0a3d62;
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
+/* IFRAME ESTILO */
 iframe {
-    width:100%;
-    border:none;
-    border-radius:10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
 }
 
-.checkbox {
-    margin-top:15px;
-    font-weight:bold;
+/* CHECKBOX */
+label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
 }
 
+/* BOTÕES ESTILIZADOS */
 .btn {
-    display:block;
-    text-align:center;
-    padding:15px;
-    margin-top:15px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-
-.whatsapp {
-    background:#25D366;
-    color:white;
+.btn.facebook {
+    background: #1877F2;
 }
-
-.pdf {
-    background:#e55039;
-    color:white;
-}
-
 .btn:hover {
-    opacity:0.9;
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
-footer {
-    text-align:center;
-    color:white;
-    padding:15px;
+/* RESPONSIVO */
+@media (max-width:600px){
+    header h1 {font-size: 26px;}
+    h2 {font-size: 20px;}
+    .btn {font-size:16px;padding:12px;}
 }
 </style>
-
 </head>
-
 <body>
 
 <header>
-    <img src="https://lh3.googleusercontent.com/d/16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn">
+    <img src="https://drive.google.com/uc?export=view&id=16Me3vjk4riTL-WIiE0jS7Vs80sQHrTbn" alt="Logo TUYE ANGOLA">
     <h1>TUYE ANGOLA</h1>
-    <p>Plataforma Oficial de Inscrição</p>
+    <p>Inscrição Oficial de Membros</p>
 </header>
 
 <div class="container">
 
-<h2>📄 Estatuto da Organização</h2>
+    <!-- ESTATUTO -->
+    <h2>📄 Estatuto da Organização</h2>
+    <iframe src="https://drive.google.com/file/d/1foAfNRJekVj4BChnR1oqq0qKTEguwP5T/preview" height="400"></iframe>
 
-<iframe src="https://drive.google.com/file/d/1foAfNRJekVj4BChnR1oqq0qKTEguwP5T/preview" height="400"></iframe>
-
-<a href="https://drive.google.com/uc?export=download&id=1foAfNRJekVj4BChnR1oqq0qKTEguwP5T" 
-   class="btn pdf" target="_blank">
-   📄 Baixar Estatuto em PDF
-</a>
-
-<div class="checkbox">
     <label>
         <input type="checkbox" id="confirmar">
         Confirmo que li e aceito o estatuto *
     </label>
+
+    <!-- FORMULÁRIO -->
+    <h2>📝 Formulário de Inscrição</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeS6H-KA6P64JJ2Y7kzqtp5otpZ-o4vYD6zUcnR2527FmMs9Q/viewform?embedded=true" height="900"></iframe>
+
+    <!-- BOTÕES -->
+    <a href="#" class="btn" onclick="whatsapp()">🚀 Entrar no Grupo Oficial WhatsApp</a>
+    <a href="#" class="btn facebook" onclick="facebook()">📘 Visitar Facebook</a>
+
 </div>
-
-<h2>📝 Formulário de Inscrição</h2>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeS6H-KA6P64JJ2Y7kzqtp5otpZ-o4vYD6zUcnR2527FmMs9Q/viewform?embedded=true" height="900"></iframe>
-
-<a href="#" class="btn whatsapp" onclick="abrirWhatsApp()">
-📲 Falar no WhatsApp
-</a>
-
-</div>
-
-<footer>
-© 2026 TUYE ANGOLA — Todos os direitos reservados
-</footer>
 
 <script>
-function abrirWhatsApp(){
-
-    var check = document.getElementById("confirmar");
-
-    if(!check.checked){
-        alert("Por favor, confirme que leu o estatuto.");
+function whatsapp() {
+    if(!document.getElementById("confirmar").checked){
+        alert("Confirme que leu o estatuto primeiro.");
         return;
     }
+    window.open("https://chat.whatsapp.com/FnTC4KuSnvLJiep9CGWWv8?mode=gi_t","_blank");
+}
 
-    var numero = "244929311220";
-    var mensagem = "Olá, sou novo membro da TUYE ANGOLA. Já fiz a minha inscrição.";
-
-    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
-
-    window.open(url, "_blank");
+function facebook() {
+    if(!document.getElementById("confirmar").checked){
+        alert("Confirme que leu o estatuto primeiro.");
+        return;
+    }
+    window.open("https://www.facebook.com/share/1CcP8r8fC5/?mibextid=wwXIfr","_blank");
 }
 </script>
 
